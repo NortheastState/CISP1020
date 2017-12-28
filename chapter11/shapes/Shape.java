@@ -30,7 +30,7 @@ public class Shape
 	}
 	
 	//defining calculateArea here makes late binding possible 
-	//bass class has not calculateArea method so no Override necessary
+	//base class has not calculateArea method so no Override necessary
 	public double calculateArea()
 	{
 		return 0.0;
