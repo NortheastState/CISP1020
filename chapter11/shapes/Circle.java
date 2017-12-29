@@ -49,15 +49,11 @@ public class Circle extends Shape
 	//annotation helps prevent mistakes and requires the method to be exactly like the base class method
 	@Override
 	public boolean equals(Object o)
-	{
-		System.out.println("In Equals A");
-		
+	{		
 		if (!(o instanceof Circle)) {
             return false;
         }
-		
-		System.out.println("In Equals B");
-		
+			
 		double rad = ((Circle)o).getRadius();
 		if ( rad == this.radius )
 			return true;

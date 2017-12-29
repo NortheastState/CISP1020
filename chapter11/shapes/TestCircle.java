@@ -10,13 +10,13 @@ class TestCircle
 {
 
 	private static Circle circle;
-	private static Circle circleOverlaoded;
+	private static Circle circleOverloaded;
 	
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception
 	{
 		circle = new Circle();
-		circleOverlaoded = new Circle("Overlaoded Constructor", 1.57);
+		circleOverloaded = new Circle("Overlaoded Constructor", 1.57);
 	}
 
 	@Test
@@ -32,19 +32,20 @@ class TestCircle
 	@DisplayName("Test overloaded constructor")
 	void testOverloadedConstructor()
 	{
-		System.out.print(circleOverlaoded.getName());
-		assertTrue(circleOverlaoded.getName().equals("Overlaoded Constructor"));
-		assertEquals(circleOverlaoded.getRadius(), 1.57);
-		assertEquals(circleOverlaoded.calculateArea(), 7.743711731833481);
+		System.out.print(circleOverloaded.getName());
+		assertTrue(circleOverloaded.getName().equals("Overlaoded Constructor"));
+		assertEquals(circleOverloaded.getRadius(), 1.57);
+		assertEquals(circleOverloaded.calculateArea(), 7.743711731833481);
 	}
 	
 	@Test
 	@DisplayName("Test copy constructor")
 	void testCopyConstructor()
 	{
-		Circle tempC = new Circle(circleOverlaoded);
+		Circle tempC = new Circle(circleOverloaded);
 		tempC.setRadius(2.22);
-		assertEquals(circleOverlaoded.getRadius(), 1.57);
+		assertEquals(circleOverloaded.getRadius(), 1.57);
+		assertFalse(tempC.equals(circleOverloaded));
 	}
 
 }
