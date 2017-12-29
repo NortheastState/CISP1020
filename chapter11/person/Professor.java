@@ -6,5 +6,8 @@ public class Professor extends Employee
 {
 	private ArrayList<String> classes;
 	
-	
+	public Professor()
+	{
+		classes = new ArrayList<String>();
+	}
 }
