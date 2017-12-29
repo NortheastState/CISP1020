@@ -1,7 +1,7 @@
 # CISP1020-A01
 Computer Science Two A01
 
-Computer Science Two (CISP 1020) is a continuation of Computer Science One (CISP 1010). Computer Science Two examines topics of programming in a high-level language, including good style, algorithms, documentation, UML, inheritance, ploymorphism, exception handling, abstract classes, interfaces, elementary data structures, JavaFX, text files, binary I/O, and Generics.
+Computer Science Two (CISP 1020) is a continuation of Computer Science One (CISP 1010). Computer Science Two examines topics of programming in a high-level language, including good style, algorithms, documentation, UML, inheritance, ploymorphism, exception handling, abstract classes, interfaces, elementary data structures, JavaFX, text files, binary I/O, and Generics. We will also explore Git and GitHub to create a source control apperatus.
 
 This course will use REVEL for Liang Java, 10th Edition. ISBN-13: 9780134167008.
 
