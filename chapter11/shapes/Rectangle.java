@@ -1,10 +1,35 @@
+/**
+ * -------------------------------------------------
+ * File name: Rectangle.java
+ * Project name: CISP1020
+ * -------------------------------------------------
+ * Creator's name: David Blair
+ * Email: dlblair@northeaststate.edu
+ * Course and section: CISP 1020 A01
+ * Creation date: Jan 11, 2018
+ * -------------------------------------------------
+ */
 package chapter11.shapes;
 
+/**
+ * 
+ * <b>This class extends the functionality of the Shape class</b>
+ * <hr>
+ * Date created: Jan 12, 2018
+ * <hr>
+ * 
+ * @author David Blair
+ */
 public class Rectangle extends Shape
 {
+	// class attributes
 	private double length;
 	private double width;
 
+	/**
+	 * 
+	 * Description: Default constructor Date: Jan 12, 2018
+	 */
 	public Rectangle()
 	{
 		super();
@@ -12,6 +37,15 @@ public class Rectangle extends Shape
 		this.width = 0.0;
 	}
 
+	/**
+	 * 
+	 * Description: Overloaded constructor
+	 * Date: Jan 12, 2018
+	 * @param name
+	 * @param length
+	 * @param width
+	 * 
+	 */
 	public Rectangle(String name, double length, double width)
 	{
 		super(name);
@@ -19,51 +53,98 @@ public class Rectangle extends Shape
 		this.width = width;
 	}
 
+	/**
+	 * 
+	 * Method description: return length attribute value
+	 * Date: Jan 12, 2018
+	 * @return
+	 * @return double
+	 */
 	public double getLength()
 	{
 		return length;
 	}
 
+	/**
+	 * 
+	 * Method description: set length attribute value
+	 * Date: Jan 12, 2018
+	 * @param length
+	 * @return void
+	 */
 	public void setLength(double length)
 	{
 		this.length = length;
 	}
 
+	/**
+	 * 
+	 * Method description: get width attribute value
+	 * Date: Jan 12, 2018
+	 * @return
+	 * @return double
+	 */
 	public double getWidth()
 	{
 		return width;
 	}
 
+	/**
+	 * 
+	 * Method description: set width attribute value 
+	 * Date: Jan 12, 2018
+	 * @param width
+	 * @return void
+	 */
 	public void setWidth(double width)
 	{
 		this.width = width;
 	}
 
-	//annotation helps prevent mistakes and requires the method to be exactly like the base class method
+	/**
+	 * 
+	 * Method description: annotation helps prevent mistakes and requires the method to be exactly
+	 * like the base class method
+	 * Date: Jan 12, 2018
+	 * @return double
+	 */
 	@Override
 	public double calculateArea()
 	{
 		return this.length * this.width;
 	}
 
-	//annotation helps prevent mistakes and requires the method to be exactly like the base class method
+	/**
+	 * 
+	 * Method description: annotation helps prevent mistakes and requires the method to be exactly
+	 * like the base class method
+	 * Date: Jan 12, 2018
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{
 		return "Length: " + Double.toString(length) + " Width: " + Double.toString(width);
 	}
 
-	//annotation helps prevent mistakes and requires the method to be exactly like the base class method
+	/**
+	 * 
+	 * Method description: annotation helps prevent mistakes and requires the method to be exactly
+	 * like the base class method
+	 * Date: Jan 12, 2018
+	 * @param Object
+	 * @return boolean
+	 */
 	@Override
 	public boolean equals(Object o)
 	{
-		if(!(o instanceof Rectangle))
+		if (!(o instanceof Rectangle))
 			return false;
-		
+
 		if (((Rectangle) o).length == this.length && ((Rectangle) o).width == this.width)
 			return true;
 		else
 			return false;
 	}
-	
+
 }

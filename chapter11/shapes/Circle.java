@@ -1,52 +1,119 @@
+/**
+ * -------------------------------------------------
+ * File name: Circle.java
+ * Project name: CISP1020
+ * -------------------------------------------------
+ * Creator's name: David Blair
+ * Email: dlblair@northeaststate.edu
+ * Course and section: CISP 1020 A01
+ * Creation date: Jan 11, 2018
+ * -------------------------------------------------
+ */
 package chapter11.shapes;
 
+/**
+ * 
+ * <b>Extend the functionality of Shape class</b>
+ * <hr>
+ * Date created: Jan 12, 2018
+ * <hr>
+ * @author David Blair
+ */
 public class Circle extends Shape
 {
+	//class attributes
 	private double radius;
 	
+	/**
+	 * 
+	 * Description: Default Constructor
+	 * Date: Jan 12, 2018
+	 */
 	public Circle()
 	{
 		super();
 		this.radius = 0.0;
 	}
 	
+	/**
+	 * 
+	 * Description: Overloaded Constructor
+	 * @param name
+	 * @param radius
+	 * Date: Jan 12, 2018
+	 */
 	public Circle(String name, double radius)
 	{
 		super(name);
 		this.radius = radius;
 	}
 
+	/**
+	 * 
+	 * Description: Copy Constructor
+	 * @param circle
+	 * Date: Jan 12, 2018
+	 */
 	public Circle(Circle circle)
 	{
 		super(circle);
 		this.radius = circle.getRadius();
 	}
 			
+	/**
+	 * 
+	 * Method description: Return radius attribute
+	 * Date: Jan 12, 2018
+	 * @return
+	 * @return double
+	 */
 	public double getRadius()
 	{
 		return radius;
 	}
 
+	/**
+	 * 
+	 * Method description: Set radius attribute
+	 * Date: Jan 12, 2018
+	 * @param radius
+	 * @return void
+	 */
 	public void setRadius(double radius)
 	{
 		this.radius = radius;
 	}
 	
-	//annotation helps prevent mistakes and requires the method to be exactly like the base class method
+	/** Method description: Returns the area of this shape. 
+	 * Annotation helps prevent mistakes and requires the
+	 * method to be exactly like the base class method.
+	 * Date: Jan 12, 2018
+	 * @return double
+	 */
 	@Override
 	public double calculateArea()
 	{
 		return Math.PI * Math.pow(radius, 2);
 	}
 
-	//annotation helps prevent mistakes and requires the method to be exactly like the base class method
+	/** Method description: Returns the string value for this class. 
+	 * Annotation helps prevent mistakes and requires the
+	 * method to be exactly like the base class method.
+	 * Date: Jan 12, 2018
+	 * @return String
+	 */
 	@Override
 	public String toString()
 	{
 		return "Radius: " + Double.toString(radius);
 	}
 	
-	//annotation helps prevent mistakes and requires the method to be exactly like the base class method
+	/** Method description: Compares two like objects for equality.
+	 * Annotation helps prevent mistakes and requires the
+	 * method to be exactly like the base class method.
+	 * Date: Jan 12, 2018
+	 * @return boolean
+	 */
 	@Override
 	public boolean equals(Object o)
 	{		
