@@ -15,10 +15,10 @@ import java.util.ArrayList;
 
 public class Professor extends Employee
 {
+	private String officeNumber;
+	private String department;
 	private ArrayList<String> classes;
 	
-	public Professor()
-	{
-		classes = new ArrayList<String>();
-	}
+	//complete class
+	//--------------
 }

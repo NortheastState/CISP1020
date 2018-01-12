@@ -17,4 +17,7 @@ public class Employee extends Person
 	private double pay;
 	private boolean salary;
 	private String department;
+	
+	//complete class
+	//--------------
 }

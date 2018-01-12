@@ -20,4 +20,6 @@ public class Student extends Person
 	private Date startDate;
 	private ArrayList<String> classes;
 	
+	//complete class
+	//--------------
 }
