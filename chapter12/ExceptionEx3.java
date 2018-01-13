@@ -33,7 +33,7 @@ public class ExceptionEx3
 		try
 		{
 			int anInt1 = 10;
-			int anInt2 = 0;
+			int anInt2 = 10;
 			System.out.println(runDivision(anInt1, anInt2));
 		}
 		catch(ArithmeticException error)
@@ -43,6 +43,15 @@ public class ExceptionEx3
 		finally //finally is optional and will always execute, with or without an exception
 		{
 			System.out.println("Finally!");
+		}
+		
+		try
+		{
+			System.out.println("6 + 3 is " + addTwoNumbers(6, 3));
+		}
+		catch(NegativeNumberException error)
+		{
+			System.out.println(error.getMessage());
 		}
 		
 	}
@@ -56,11 +65,32 @@ public class ExceptionEx3
 	 * @param b
 	 * @return double
 	 */
-	public static double runDivision(int a, int b)
+	public static double runDivision(int a, int b) throws ArithmeticException 
 	{
 		if(b == 0)
 			throw new ArithmeticException("Divide by zero error");
 		
 		return (double)a/b;
+	}
+	
+	/**
+	 * 
+	 * Method description: Silly example but you get the idea 
+	 * Date: Jan 12, 2018
+	 * @param a
+	 * @param b
+	 * 
+	 * @throws NegativeNumberException
+	 * @return int
+	 */
+	public static int addTwoNumbers(int a, int b) throws NegativeNumberException
+	{
+		if(a < 0)
+			throw new NegativeNumberException(a);
+		
+		if(b < 0)
+			throw new NegativeNumberException(b);
+		
+		return a + b;
 	}
 }
