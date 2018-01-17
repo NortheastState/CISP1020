@@ -86,7 +86,7 @@ public class Circle extends Shape
 	
 	/** Method description: Returns the area of this shape. 
 	 * Annotation helps prevent mistakes and requires the
-	 * method to be exactly like the base class method.
+	 * method signature to be exactly like the base class method.
 	 * Date: Jan 12, 2018
 	 * @return double
 	 */
@@ -98,19 +98,19 @@ public class Circle extends Shape
 
 	/** Method description: Returns the string value for this class. 
 	 * Annotation helps prevent mistakes and requires the
-	 * method to be exactly like the base class method.
+	 * method signature to be exactly like the base class method.
 	 * Date: Jan 12, 2018
 	 * @return String
 	 */
 	@Override
 	public String toString()
 	{
-		return "Radius: " + Double.toString(radius);
+		return "Name: " + super.getName() + " - Radius: " + Double.toString(radius);
 	}
 	
 	/** Method description: Compares two like objects for equality.
 	 * Annotation helps prevent mistakes and requires the
-	 * method to be exactly like the base class method.
+	 * method signature to be exactly like the base class method.
 	 * Date: Jan 12, 2018
 	 * @return boolean
 	 */

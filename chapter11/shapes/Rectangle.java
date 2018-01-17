@@ -124,7 +124,7 @@ public class Rectangle extends Shape
 	@Override
 	public String toString()
 	{
-		return "Length: " + Double.toString(length) + " Width: " + Double.toString(width);
+		return "Name: " + super.getName() + " - Length: " + Double.toString(length) + " Width: " + Double.toString(width);
 	}
 
 	/**

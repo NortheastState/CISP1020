@@ -82,8 +82,8 @@ public class Shape
 	
 	/**
 	 * 
-	 * Method description: defining calculateArea here makes late binding possible
-	 * base class has not calculateArea method so no Override necessary
+	 * Method description: defining calculateArea here makes late binding possible.
+	 * Object base class has no calculateArea method so no Override necessary
 	 * Date: Jan 12, 2018
 	 * @return double
 	 */
@@ -92,11 +92,9 @@ public class Shape
 		return 0.0;
 	}
 	
-	//defined in base class, override here and in child
-
 	/**
 	 * 
-	 * Method description: override base class toString behavior
+	 * Method description: override base class Object toString behavior
 	 * Date: Jan 12, 2018
 	 * @return String
 	 */
@@ -106,10 +104,9 @@ public class Shape
 		return "Shape Class: ";
 	}
 	
-	//defined in base class, override here and in child
 	/**
 	 * 
-	 * Method description: override base class equals behavior
+	 * Method description: override base class Object equals behavior
 	 * Date: Jan 12, 2018
 	 * @return boolean
 	 */

@@ -45,7 +45,6 @@ class TestRectangle
 		rectangleOverloaded = new Rectangle("rectangle", 5.1, 4.8);
 	}
 
-	//complete all unit tests for rectangle
-	//-------------------------------------
+	
 	
 }

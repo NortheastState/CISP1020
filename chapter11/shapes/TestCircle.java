@@ -93,7 +93,5 @@ class TestCircle
 		assertFalse(tempC.equals(circleOverloaded));
 	}
 	
-	//finish all circle tests below
-	//-----------------------------
 
 }
