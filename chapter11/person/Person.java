@@ -10,7 +10,6 @@
  * -------------------------------------------------
  */
 package chapter11.person;
-
 /**
  * 
  * <b>Base class for system</b>

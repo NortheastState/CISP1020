@@ -14,6 +14,14 @@ package chapter11.person;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * 
+ * <b>Extends Person class</b>
+ * <hr>
+ * Date created: Jan 17, 2018
+ * <hr>
+ * @author David Blair
+ */
 public class Student extends Person
 {
 	private int studentID;

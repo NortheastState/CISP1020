@@ -13,6 +13,14 @@ package chapter11.person;
 
 import java.util.ArrayList;
 
+/**
+ * 
+ * <b>Extends the Employee class</b>
+ * <hr>
+ * Date created: Jan 17, 2018
+ * <hr>
+ * @author David Blair
+ */
 public class Professor extends Employee
 {
 	private String officeNumber;

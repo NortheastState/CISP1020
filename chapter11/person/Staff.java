@@ -11,9 +11,17 @@
  */
 package chapter11.person;
 
-public class Staff extends Person
+/**
+ * 
+ * <b>Extends Employee class</b>
+ * <hr>
+ * Date created: Jan 17, 2018
+ * <hr>
+ * @author David Blair
+ */
+public class Staff extends Employee
 {
-	private String campusAddress;
+	private int hoursPerWeek;
 	
 	//complete class
 	//--------------
