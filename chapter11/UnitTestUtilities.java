@@ -30,19 +30,7 @@ import org.junit.jupiter.api.Test;
 class UnitTestUtilities
 {
 
-	private Utilities Util;
-	
-	/**
-	 * 
-	 * Method description: initialize object to me tested
-	 * Date: Jan 11, 2018
-	 * @return void
-	 */
-	@BeforeAll
-	public void initAll()
-	{
-		Util = new Utilities();
-	}
+	private Utilities Util = new Utilities();
 	
 	/**
 	 * 
@@ -114,6 +102,5 @@ class UnitTestUtilities
 		assertEquals(Util.isAValidInteger("15-3"), false);
 		assertEquals(Util.isAValidInteger("-00-3"), false);
 	}
-	
 	
 }
