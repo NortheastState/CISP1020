@@ -165,6 +165,7 @@ public class FOODDriver
 							{
 								found = true;
 								tables.get(intSelection - 1).addCustomerToTable(new Customer(customer));
+								break;
 							}
 						}
 
