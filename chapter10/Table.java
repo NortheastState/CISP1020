@@ -51,6 +51,11 @@ public class Table
 		customers.add(customer);
 	}
 	
+	public boolean isValidCustomer(String name)
+	{
+		return true;
+	}
+	
 	public ArrayList<Customer> getCustomers()
 	{
 		return customers;

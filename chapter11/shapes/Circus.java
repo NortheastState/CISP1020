@@ -50,7 +50,18 @@ public class Circus
 		// is the type Shape but we only place child objects in it.
 		for(Shape shape : balloons)
 		{
+			if(shape instanceof Circle)
+			{
+				System.out.println("A Circle");
+			}
+			
+			if(shape instanceof Rectangle)
+			{
+				System.out.println("A Rectangle");
+			}
+			
 			System.out.println(shape.toString());
+			System.out.println(shape.calculateArea());
 		}
 	}
 
