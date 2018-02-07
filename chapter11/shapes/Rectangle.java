@@ -124,6 +124,7 @@ public class Rectangle extends Shape
 	@Override
 	public String toString()
 	{
+		// could take advantage of the base-class super.toString();
 		return "Name: " + super.getName() + " - Length: " + Double.toString(length) + " Width: " + Double.toString(width);
 	}
 

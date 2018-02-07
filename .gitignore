@@ -1,0 +1,9 @@
+*.class
+*.pages
+*.vpp
+.DS_Store
+.classpath
+.project
+.settings
+*.odt
+
