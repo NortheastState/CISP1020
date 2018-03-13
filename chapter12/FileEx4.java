@@ -36,8 +36,9 @@ public class FileEx4
 		File file = new File("testFile.txt");
 		//this time read in info from the text file using the 
 		//Scanner object.
-		try(Scanner input = new Scanner(file))
+		try
 		{
+			Scanner input = new Scanner(file);
 			while(input.hasNext())
 			{				
 				System.out.println(input.nextLine());

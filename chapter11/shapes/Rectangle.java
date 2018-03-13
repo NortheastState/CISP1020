@@ -44,11 +44,20 @@ public class Rectangle extends Shape
 	 * @param name
 	 * @param length
 	 * @param width
+	 * @throws NegativeDoubleException 
 	 * 
 	 */
-	public Rectangle(String name, double length, double width)
+	public Rectangle(String name, double length, double width) throws NegativeDoubleException
 	{
 		super(name);
+		if(length < 0)
+		{
+			throw new NegativeDoubleException("Length can not be less than zero", length);
+		}
+		if(width < 0)
+		{
+			throw new NegativeDoubleException("Width can not be less than zero", width);
+		}
 		this.length = length;
 		this.width = width;
 	}
@@ -126,6 +135,11 @@ public class Rectangle extends Shape
 	{
 		// could take advantage of the base-class super.toString();
 		return "Name: " + super.getName() + " - Length: " + Double.toString(length) + " Width: " + Double.toString(width);
+	}
+	
+	public String toSave()
+	{
+		return "Rectangle," + super.toSave() + "," + length + "," + width;
 	}
 
 	/**

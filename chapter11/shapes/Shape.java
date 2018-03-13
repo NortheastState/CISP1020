@@ -116,4 +116,9 @@ public class Shape
 		return false;	
 	}
 	
+	public String toSave()
+	{
+		return name;
+	}
+	
 }

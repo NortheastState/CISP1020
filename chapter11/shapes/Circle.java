@@ -22,7 +22,7 @@ package chapter11.shapes;
 public class Circle extends Shape
 {
 	//class attributes
-	private double radius;
+	private double radius = 0.0;
 	
 	/**
 	 * 
@@ -41,10 +41,16 @@ public class Circle extends Shape
 	 * @param name
 	 * @param radius
 	 * Date: Jan 12, 2018
+	 * @throws NegativeDoubleException 
 	 */
-	public Circle(String name, double radius)
+	public Circle(String name, double radius) throws NegativeDoubleException
 	{
 		super(name);
+		if(radius < 0)
+		{
+			throw new NegativeDoubleException("The radius must be a positive number", radius);
+			
+		}
 		this.radius = radius;
 	}
 
@@ -127,6 +133,9 @@ public class Circle extends Shape
 		else
 			return false;
 	}
-	
-	
+	                           
+	public String toSave()
+	{
+		return "Circle," + super.toSave() + "," + radius;
+	}
 }

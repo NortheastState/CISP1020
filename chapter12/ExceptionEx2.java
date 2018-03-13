@@ -39,6 +39,10 @@ public class ExceptionEx2
 		{
 			System.out.println(error.getMessage());
 		}
+		catch(Exception error)
+		{
+			System.out.println(error.getMessage());
+		}
 		
 
 	}

@@ -41,15 +41,17 @@ public class FileEx2
 			//if file exists, it will be written over
 			File file = new File("testFile.txt");
 			PrintWriter output = new PrintWriter(file);
+			
 			output.print("John Doe,");
 			output.println("90");
 			output.print("Jill Hill,");
 			output.println("80");
 			
-			output.close();
+			output.close(); //close the resource
 		}
 		catch(IOException error)
 		{
+			System.out.println("ERROR: ");
 			System.out.println(error.getMessage());
 		}
 	}

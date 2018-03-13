@@ -11,7 +11,14 @@
  */
 package chapter11.shapes;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 
 /**
  * <b>A Circus is full of all kinds of shapes
@@ -40,29 +47,92 @@ public class Circus
 	{
 		ArrayList<Shape> balloons = new ArrayList<Shape>();
 		
-		balloons.add(new Circle("Red Circle Balloon", 15.5));
-		balloons.add(new Circle("Green Circle Balloon", 22.3));
-		balloons.add(new Rectangle("Yellow Rectangle Balloon", 10.5, 20.5));
-		balloons.add(new Rectangle("Blue Rectangle Balloon", 9.0, 21.2));
+		double diameter1 = 15.5;
+		double diameter2 = 22.3;
+		double length1 = 10.5;
+		double length2 = 9.0;
+		double width1 = 20.5;
+		double width2 = 21.2;
+		
+		try
+		{
+			balloons.add(new Circle("Red Circle Balloon", diameter1));
+			balloons.add(new Circle("Green Circle Balloon", diameter2));
+			balloons.add(new Rectangle("Yellow Rectangle Balloon", length1, width1));
+			balloons.add(new Rectangle("Blue Rectangle Balloon", length2, width2));
+		}
+		catch(NegativeDoubleException err)
+		{
+			JOptionPane.showMessageDialog(null, err.getMessage());
+			System.exit(-1);
+		}
+		
 		
 		// Show all balloons.
 		// Important: Notice polymorphism at work. The arraylist
 		// is the type Shape but we only place child objects in it.
-		for(Shape shape : balloons)
+		File file = new File("Circus.txt");
+		PrintWriter output = null; 
+		try
 		{
-			if(shape instanceof Circle)
-			{
-				System.out.println("A Circle");
+			output = new PrintWriter(file); // requires throws for FileNotFoundException
+			for(Shape shape : balloons)
+			{	
+				//System.out.println(shape.toString());
+				//System.out.println(shape.calculateArea());
+				output.println(shape.toSave());
 			}
-			
-			if(shape instanceof Rectangle)
-			{
-				System.out.println("A Rectangle");
-			}
-			
-			System.out.println(shape.toString());
-			System.out.println(shape.calculateArea());
 		}
+		catch(FileNotFoundException err)
+		{
+			System.out.println(err.getMessage());
+		}
+		output.close();
+		
+		//clear arraylist
+		balloons.clear();
+		
+		//read file create above
+		File file2 = new File("Circus.txt");
+		try
+		{
+			Scanner input = new Scanner(file2);
+			while(input.hasNext())
+			{				
+				String reader[] = input.nextLine().split(",");
+				
+				//System.out.println(reader);
+				if(reader[0].equals("Circle"))
+				{
+					//String circle[] = reader.split(",");
+					balloons.add(new Circle(reader[1], Double.parseDouble(reader[2]) ) );
+				}
+				else
+				{
+					//String rect[] = reader.split(",");
+					balloons.add(new Rectangle(reader[1], Double.parseDouble(reader[2]), Double.parseDouble(reader[3])));
+				}
+			}
+			input.close();
+		}
+		catch(IOException error)
+		{
+			System.out.println(error.getMessage());
+		} catch (NumberFormatException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NegativeDoubleException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		for(Shape shape:balloons)
+		{
+			System.out.println(shape);
+		}
+		
 	}
 
 }
